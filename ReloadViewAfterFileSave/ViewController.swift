@@ -23,11 +23,9 @@ class ViewController: UIViewController {
     }
     
     @objc func updateUI() {
-//        DispatchQueue.main.async {
-            self.myLabel.textColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
-            self.myLabel.text = "File is saved successfully"
-            self.view.setNeedsDisplay()
-//        }
+        self.myLabel.textColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
+        self.myLabel.text = "File is saved successfully"
+        self.view.setNeedsDisplay()
     }
 
 }
