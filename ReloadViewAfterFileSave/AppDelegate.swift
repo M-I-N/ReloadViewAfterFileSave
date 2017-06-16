@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func saveFile() {
         // do your job with your custom class's method for saving
         // you should get a filepath back
-        CustomXMLParser().parseAndSave { (filePath) in
+        FileStorageHelper().saveToLocalStorage { (filePath) in
             if FileManager.default.fileExists(atPath: filePath) {
                 NotificationCenter.default.post(name: Notification.Name("FileWrittenCompletion"), object: nil)
             }
