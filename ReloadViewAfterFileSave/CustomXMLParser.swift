@@ -20,12 +20,11 @@ class CustomXMLParser: NSObject {
             do {
                 // write to filepath
                 try string.write(to: fileURL!, atomically: true, encoding: .utf8)
+                DispatchQueue.main.async {
+                    completion((fileURL?.path)!)
+                }
             } catch {
                 print("\(error.localizedDescription)")
-            }
-            
-            DispatchQueue.main.async {
-                completion((fileURL?.path)!)
             }
         }
     }
